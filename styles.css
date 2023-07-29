@@ -1,3 +1,122 @@
 *{
     font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__wrapper{
+    width: 80%;
+    height: 1.6rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav__wrapper__list{
+    position: absolute;
+    z-index: 1000;
+    top: 40px;
+    right: 0;
+    width: 45%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    overflow: hidden;
+    transition: .4s height ease-out;
+}
+
+.nav__wrapper__list--active{
+    height: 10rem;
+}
+
+.nav__wrapper__list-item {
+    margin: .2rem;
+    padding: .2rem 0;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.nav__wrapper__list-item a{
+    color: grey;
+}
+
+.wrapper__hamburger-menu__bars{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper__hamburger-menu__bars i {
+    font-size: 1.4rem;
+    color: black;
+}
+ 
+@media (min-width: 550px){
+    
+    nav{
+        height: 6rem;
+    }
+    .nav__wrapper{
+        height: 90%;
+        width: 55%;
+    }   
+
+    .nav__wrapper__list{
+        position: static;
+        height: 100%;
+        flex-direction: row;
+        align-items: center;
+        min-width: 320px;
+        max-width: 440px;
+    }
+
+    .nav__wrapper__list-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 .1rem;
+        height: 80%;
+        padding: .2rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        transition: .3s background-color ease-in-out ;
+    }
+
+    .nav__wrapper__list-item:hover{
+        background-color: salmon;
+    }
+
+    .nav__wrapper__list-item:hover a{
+        color: white;
+    }
+
+    .nav__wrapper__hamburger-menu{
+        display: none;
+    }
 }
