@@ -210,13 +210,13 @@ main {
 }
 
 .banner {
-  height: 84vh;
+  height: 76vh;
   background-image: linear-gradient(
       to bottom,
-      rgba(105, 105, 105, 0.6),
-      rgba(105, 105, 105, 0.6)
+      rgba(118, 153, 212, 0.2),
+      rgba(118, 153, 212, 0)
     ),
-    url("images/mountains_medium.jpg");
+    url("images/holidays_beach_sm.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -272,23 +272,26 @@ main {
   padding: 0.6rem 0.8rem;
   width: 100%;
   font-size: 1rem;
+  font-weight: 200;
   text-transform: uppercase;
 }
 
 .banner__search-box__item p {
   color: rgb(163, 163, 163);
-  text-align: center;
+  font-weight: 200;
+  line-height: 1.6rem;
+  text-align: left;
 }
 
 @media (min-width: 640px) {
   .banner {
-    height: 60vh;
+    height: 65vh;
     background-image: linear-gradient(
         to bottom,
-        rgba(105, 105, 105, 1),
-        rgba(105, 105, 105, 0.1)
+        rgba(118, 153, 212, 0.2),
+        rgba(118, 153, 212, 0)
       ),
-      url("images/mountains_medium.jpg");
+      url("images/holidays_beach_md.jpg");
     align-items: flex-start;
   }
 
@@ -346,16 +349,120 @@ main {
 
 @media (min-width: 1240px) {
   .banner {
-    height: 70vh;
+    height: 65vh;
     background-image: linear-gradient(
         to bottom,
-        rgba(105, 105, 105, 1),
-        rgba(105, 105, 105, 0.1)
+        rgba(118, 153, 212, 0.2),
+        rgba(118, 153, 212, 0)
       ),
-      url("images/mountains_fhd.jpg");
+      url("images/holidays_beach_md.jpg");
   }
 
   .banner__wrapper {
     width: 60%;
+  }
+
+  .banner__search-box {
+    margin: 5% auto 0 auto;
+    width: 80%;
+    align-items: center;
+    padding: 2rem 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .banner {
+    height: 65vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(118, 153, 212, 0.2),
+        rgba(118, 153, 212, 0)
+      ),
+      url("images/holidays_beach_lg.jpg");
+  }
+
+  .banner__wrapper {
+    width: 60%;
+  }
+
+  .banner__search-box {
+    margin: 5% auto 0 auto;
+    width: 62%;
+    align-items: center;
+    padding: 2rem 0;
+  }
+}
+
+/*!!!!!!!!!!!!!-NEWSLETTER-!!!!!!!!!!!!!!*/
+
+.newsletter {
+  background-color: #9448bcff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 19rem;
+
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0% 80%);
+}
+
+.newsletter__wrapper {
+  width: 72%;
+  height: 76%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  margin-top: 2.6rem;
+}
+
+.newsletter__wrapper__title {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 300;
+  padding: 0.4rem 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.newsletter__wrapper__description {
+  font-weight: 100;
+  margin-bottom: 2.1rem;
+}
+
+.newsletter__wrapper__button {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid white;
+  width: 12rem;
+  height: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+@media (min-width: 640px) {
+  .newsletter__wrapper__title {
+    font-size: 2.6rem;
+  }
+
+  .newsletter__wrapper__button {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.8rem, 0.8rem;
+    width: 14.4rem;
+    height: 3rem;
+    transition: 0.3s background-color ease-in-out;
+  }
+
+  .newsletter__wrapper__button:hover {
+    background-color: #63b4d1ff;
+  }
+}
+
+@media (min-width: 1920px) {
+  .newsletter__wrapper__title {
+    font-size: 3.7rem;
+  }
+
+  .newsletter__wrapper__description {
+    font-size: 1.3rem;
   }
 }
